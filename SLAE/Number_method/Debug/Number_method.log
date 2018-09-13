@@ -1,12 +1,13 @@
-﻿  Number_method.cpp
-c:\users\dupel\source\repos\slae\number_method\number_method.cpp(50): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+﻿  pch.cpp
+  Number_method.cpp
+c:\users\dupel\source\repos\numerical-methods\slae\number_method\number_method.cpp(50): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
           with
           [
               _Ty=float
           ]
-c:\users\dupel\source\repos\slae\number_method\number_method.cpp(52): warning C4244: '-=': conversion from '_Ty' to 'int', possible loss of data
+c:\users\dupel\source\repos\numerical-methods\slae\number_method\number_method.cpp(52): warning C4244: '-=': conversion from '_Ty' to 'int', possible loss of data
           with
           [
               _Ty=float
           ]
-  Number_method.vcxproj -> C:\Users\dupel\source\repos\SLAE\Debug\Number_method.exe
+  Number_method.vcxproj -> C:\Users\dupel\Source\Repos\Numerical-methods\SLAE\Debug\Number_method.exe

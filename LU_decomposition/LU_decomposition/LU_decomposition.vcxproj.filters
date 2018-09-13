@@ -21,6 +21,9 @@
     <ClInclude Include="SLE_input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="vectorProc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

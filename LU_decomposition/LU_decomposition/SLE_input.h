@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <fstream>
 #include <vector>
+
 class SLE_input
 {
 	std::ifstream file;

@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="vectorProc.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="SLE_input.h" />
   </ItemGroup>
