@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-void output(vector< vector < float > > v) {
+void output(vector< vector < double > > v) {
 	for (int i = 0; i < v.size(); i++) {
 		for (int j = 0; j < v[i].size(); j++) {
 			cout << v[i][j] << ' ';
@@ -15,9 +15,9 @@ void output(vector< vector < float > > v) {
 }
 
 //Умножение квадратных матриц
-vector < vector < float > > composition(vector < vector < float > > a, vector < vector < float > > b) {
+vector < vector < double > > composition(vector < vector < double > > a, vector < vector < double > > b) {
 	int n = a.size();
-	vector < vector < float > > res;
+	vector < vector < double > > res;
 	res.resize(n);
 	for (int i = 0; i < n; i++){
 		res[i].resize(n);

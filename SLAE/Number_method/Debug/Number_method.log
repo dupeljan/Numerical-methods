@@ -1,13 +1,15 @@
-﻿  pch.cpp
-  Number_method.cpp
-c:\users\dupel\source\repos\numerical-methods\slae\number_method\number_method.cpp(50): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+﻿  Number_method.cpp
+c:\users\dupel\source\repos\numerical-methods\slae\number_method\vectorproc.h(9): warning C4018: '<': signed/unsigned mismatch
+c:\users\dupel\source\repos\numerical-methods\slae\number_method\vectorproc.h(10): warning C4018: '<': signed/unsigned mismatch
+c:\users\dupel\source\repos\numerical-methods\slae\number_method\number_method.cpp(18): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\dupel\source\repos\numerical-methods\slae\number_method\number_method.cpp(48): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
           with
           [
-              _Ty=float
+              _Ty=double
           ]
-c:\users\dupel\source\repos\numerical-methods\slae\number_method\number_method.cpp(52): warning C4244: '-=': conversion from '_Ty' to 'int', possible loss of data
+c:\users\dupel\source\repos\numerical-methods\slae\number_method\number_method.cpp(50): warning C4244: '-=': conversion from '_Ty' to 'int', possible loss of data
           with
           [
-              _Ty=float
+              _Ty=double
           ]
   Number_method.vcxproj -> C:\Users\dupel\Source\Repos\Numerical-methods\SLAE\Debug\Number_method.exe
