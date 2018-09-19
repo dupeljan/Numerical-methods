@@ -5,12 +5,37 @@
 #include <iostream>
 using namespace std;
 
-void output(vector< vector < double > > v) {
+
+	
+void output(vector< vector < double > > v  ) {
 	for (int i = 0; i < v.size(); i++) {
 		for (int j = 0; j < v[i].size(); j++) {
 			cout << v[i][j] << ' ';
 		}
 		cout << '\n';
+	}
+}
+
+void output(vector< vector < double > > v, ofstream& out ) {
+	for (int i = 0; i < v.size(); i++) {
+		for (int j = 0; j < v[i].size(); j++) {
+			out << v[i][j] << ' ';
+		}
+		out << '\n';
+	}
+}
+void output(vector< double > v) {
+	for (int i = 0; i < v.size(); i++) {
+		cout << v[i];
+		cout << '\n';
+	}
+}
+
+
+void output(vector< double > v, ofstream& out ) {
+	for (int i = 0; i < v.size(); i++) {
+		out << v[i];
+		out << '\n';
 	}
 }
 

@@ -38,5 +38,14 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />
+    <Text Include="output.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="input1.txt">
+      <Filter>Header Files</Filter>
+    </Text>
+    <Text Include="input2.txt">
+      <Filter>Header Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
