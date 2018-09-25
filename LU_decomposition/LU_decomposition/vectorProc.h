@@ -4,8 +4,6 @@
 #include <vector>
 #include <iostream>
 using namespace std;
-
-
 	
 void output(vector< vector < double > > v  ) {
 	for (int i = 0; i < v.size(); i++) {
