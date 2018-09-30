@@ -1,11 +1,22 @@
 #ifndef OGLWIDGET_H
 #define OGLWIDGET_H
 
+#include <QWidget>
+#include <QOpenGLWidget>
+#include <GL/glu.h>
+#include<GL/gl.h>
 
-class OGLwidget
+
+class OGLWidget : public QOpenGLWidget
 {
+
 public:
-    OGLwidget();
+    OGLWidget(QWidget *parent = 0);
+protected:
+    void initializeGL();
+    void resizeGL(int w, int h);
+    void paintGL();
 };
+
 
 #endif // OGLWIDGET_H
