@@ -1,4 +1,5 @@
 Solution:
-x[0]= 1.5
-x[1]= -0.5
-Iteration count: 2
+x[0]= -nan(ind)
+x[1]= nan
+x[2]= -nan(ind)
+Iteration count: 12
