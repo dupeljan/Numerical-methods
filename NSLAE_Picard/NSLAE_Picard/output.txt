@@ -1,4 +1,4 @@
 Solution:
-x[0]= 0.732051
-x[1]= -1.26795
-Iteration count: 112
+x[0]= 1.5
+x[1]= -0.5
+Iteration count: 2
