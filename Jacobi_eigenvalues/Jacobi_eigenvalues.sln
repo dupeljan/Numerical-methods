@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Jacobi_eigenvalues", "Jacobi_eigenvalues\Jacobi_eigenvalues.vcxproj", "{51A8AA8B-7E41-4B54-99A6-3E8BE8198329}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51A8AA8B-7E41-4B54-99A6-3E8BE8198329}.Debug|x64.ActiveCfg = Debug|x64
+		{51A8AA8B-7E41-4B54-99A6-3E8BE8198329}.Debug|x64.Build.0 = Debug|x64
+		{51A8AA8B-7E41-4B54-99A6-3E8BE8198329}.Debug|x86.ActiveCfg = Debug|Win32
+		{51A8AA8B-7E41-4B54-99A6-3E8BE8198329}.Debug|x86.Build.0 = Debug|Win32
+		{51A8AA8B-7E41-4B54-99A6-3E8BE8198329}.Release|x64.ActiveCfg = Release|x64
+		{51A8AA8B-7E41-4B54-99A6-3E8BE8198329}.Release|x64.Build.0 = Release|x64
+		{51A8AA8B-7E41-4B54-99A6-3E8BE8198329}.Release|x86.ActiveCfg = Release|Win32
+		{51A8AA8B-7E41-4B54-99A6-3E8BE8198329}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE8F51E3-738A-42D9-9630-ABF2CFF9E31E}
+	EndGlobalSection
+EndGlobal
