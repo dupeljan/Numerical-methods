@@ -1,5 +1,6 @@
 #ifndef MATRIX_INP
 #define MATRIX_INP
+#include "pch.h"
 #include <vector>
 #include <string>
 #include <math.h>
@@ -20,7 +21,7 @@ vector<vector<T>> input_matrix(string patch) {
 	}
 	//Вычисляем n
 
-	int n = (sqrt(1 + 4 * data.size()) - 1) / 2;
+	int n = sqrt(data.size());
 
 	vector<vector<T>> result;
 	result.resize(n);
@@ -30,6 +31,8 @@ vector<vector<T>> input_matrix(string patch) {
 		for (int j = 0; j < n; j++)
 			result[i][j] = data[ i*n + j];		
 	}
+
+	return result;
 }
 
 

@@ -1,5 +1,14 @@
 #include "pch.h"
+/*
 #include "Jacobi_eig_method.h"
+
+
+template<class T>
+Jacobi_eig_method<T>::Jacobi_eig_method(vector<vector<T>> A) {
+	this->A = A;
+	this->n = A.size();
+	this->eps = EPS;
+}
 
 template<class T>
 pair<int, int> Jacobi_eig_method<T>::key_elem(){
@@ -19,8 +28,13 @@ pair<int, int> Jacobi_eig_method<T>::key_elem(){
 }
 
 template<class T>
+vector<vector<T>> Jacobi_eig_method<T>::solution() {
+	return B;
+}
+
+template<class T>
 int Jacobi_eig_method<T>::sign(T val){
-	return (eps < val) - (val < eps))
+	return (eps < val) - (val < eps);
 }
 
 template<class T>
@@ -36,13 +50,6 @@ T Jacobi_eig_method<T>::Frobenius_norm(vector<vector<T>> m){
 template<class T>
 bool Jacobi_eig_method<T>::breaking_criterion(){
 	return (Frobenius_norm(B) < eps);
-}
-
-template<class T>
-Jacobi_eig_method<T>::Jacobi_eig_method(vector<vector<T>> A){
-	this->A = A;
-	this->n = A.size();
-	this->eps = EPS;
 }
 
 template<class T>
@@ -64,15 +71,15 @@ void Jacobi_eig_method<T>::solve(){
 			if (abs(p / T(q)) < eps)
 				s = abs(p) * sign(p * q) / T(2 * c * d);
 			else
-				s = sqrt(0.5 - r) * sign(p * q)
+				s = sqrt(0.5 - r) * sign(p * q);
 		}
 		else
 			c = s = sqrt(2) / T(2);
 		//compute new matrix
 		B = A;
-		b[i][i] = c * c * A[i][i] + s * s * A[j][j] + 2 * c * s * A[i][j];
-		b[j][j] = c * c * A[i][i] + s * s * A[j][j] - 2 * c * s * A[i][j];
-		b[i][j] = b[j][i] = 0;
+		B[i][i] = c * c * A[i][i] + s * s * A[j][j] + 2 * c * s * A[i][j];
+		B[j][j] = c * c * A[i][i] + s * s * A[j][j] - 2 * c * s * A[i][j];
+		B[i][j] = B[j][i] = 0;
 		for (int m = 0; m < n; m++) 
 			if ( m != i && m != j){
 				B[i][m] = B[m][i] = c * A[m][i] + s * A[m][j];
@@ -83,4 +90,8 @@ void Jacobi_eig_method<T>::solve(){
 
 	} while (!breaking_criterion());
 }
+
+*/
+
+
 
