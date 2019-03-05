@@ -1,6 +1,7 @@
 #ifndef JACOBI_EIG_METHOD
 #define JACOBI_EIG_METHOD
 #include <vector>
+#include <iostream>
 #include <math.h>
 #include <utility>
 
@@ -90,8 +91,8 @@ void Jacobi_eig_method<T>::solve() {
 		//Compute auxiliary coefficients
 		p = 2 * A[i][j];
 		q = A[i][i] - A[j][j];
-		d = sqrt(p*p + q * q);
-		if (q > eps) {
+		d = sqrt(p*p + q*q);
+		if (abs(q) > eps) {
 			r = abs(q) / T(2 * d);
 			c = sqrt(0.5 + r);
 			if (abs(p / T(q)) < eps)
@@ -104,8 +105,10 @@ void Jacobi_eig_method<T>::solve() {
 		//compute new matrix
 		B = A;
 		B[i][i] = c * c * A[i][i] + s * s * A[j][j] + 2 * c * s * A[i][j];
-		B[j][j] = c * c * A[i][i] + s * s * A[j][j] - 2 * c * s * A[i][j];
-		B[i][j] = B[j][i] = 0;
+		B[j][j] = c * c * A[j][j] + s * s * A[i][i] - 2 * c * s * A[i][j];
+		B[i][j] = B[j][i] = ( c*c - s*s) * A[i][j] + c * s * ( A[j][j] - A[i][i]); // Must be zero
+		if (abs(B[i][j]) > eps)
+			cout << "Warring, alg error" << endl;
 		for (int m = 0; m < n; m++)
 			if (m != i && m != j) {
 				B[i][m] = B[m][i] = c * A[m][i] + s * A[m][j];
