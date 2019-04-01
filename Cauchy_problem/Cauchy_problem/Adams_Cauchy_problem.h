@@ -15,7 +15,7 @@ struct point{
 	point(double x = 0, double y = 0) { this->x = x; this->y = y; }
 };
 //
-vector<point> Adams_method(double a, double b, double y0, func_pointer f, int steps);
+vector<point> Adams_method_Cauchy_solution(double a, double b, double y0, func_pointer f, int steps);
 double fixed_point_iteration(double x, function<double(double)> f, double eps);
 vector<point> Runge_Kutta_Cauchy_solution(double a, double b, double y0, func_pointer f, int steps);
 double Simpson_integral_solution(point a, point b, func_pointer f);
@@ -47,7 +47,7 @@ vector<point> Runge_Kutta_Cauchy_solution(double a, double b, double y0, func_po
 	return result;
 }
 
-vector<point> Adams_method(double a, double b, double y0, func_pointer f, int steps) {
+vector<point> Adams_method_Cauchy_solution(double a, double b, double y0, func_pointer f, int steps) {
 	steps = max(ACCURACY_ORDER, steps);
 	vector<point> result(steps+1);
 
