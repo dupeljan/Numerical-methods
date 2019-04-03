@@ -54,8 +54,8 @@ vector<point> Adams_method_Cauchy_solution(double a, double b, double y0, func_p
 	double h = abs(b - a) / double(steps);
 
 	function<double(vector<point>)> Adams_poly = [f,h](vector<point> p) {
-		vector<double> c = { 251, 646, -264, 106, -19 };
-		for_each(c.begin(), c.end(), [f](double &n) { n /= (double)720; });
+		array<double,5> c = { 251, 646, -264, 106, -19 };
+		for_each(c.begin(), c.end(), [](double &n) { n /= (double)720; });
 		double res = 0;
 		for (int i = 0; i < p.size(); i++)
 			res += c[i] * f(p[i].x, p[i].y);
