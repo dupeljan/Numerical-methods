@@ -19,6 +19,7 @@ vector<point> Adams_method_Cauchy_solution(double a, double b, double y0, func_p
 double fixed_point_iteration(double x, function<double(double)> f, double eps);
 vector<point> Runge_Kutta_Cauchy_solution(double a, double b, double y0, func_pointer f, int steps);
 double Simpson_integral_solution(point a, point b, func_pointer f);
+double error(function<double(double)> f, vector<point> res);
 //
 
 double Simpson_integral_solution(point a, point b, func_pointer f) {
@@ -80,6 +81,13 @@ vector<point> Adams_method_Cauchy_solution(double a, double b, double y0, func_p
 double fixed_point_iteration(double x, function<double(double)> f, double eps) {
 	double next = f(x);
 	return (abs(next - x) < eps) ? next : fixed_point_iteration(next, f, eps);
+}
+
+double error(function<double(double)> f, vector<point> res){
+	double result = 0;
+	for (auto &x : res)
+		result = max(result, abs(f(x.x) - x.y));
+	return result;
 }
 
 #endif // ADAMS_CAUCHY_PROBLEM
