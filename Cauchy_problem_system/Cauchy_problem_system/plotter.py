@@ -12,11 +12,14 @@ if EXAMPLE == 1:
 def get_list_from_file():
     files = filter(lambda x : ".txt" in x, os.listdir() )
     out = list()
+    print("file order")
     for x in files:
         out.append([])
+        print(x)
         with open(x,'r') as f:
             for line in f:
                 out[-1].append( list(map(float, line.split() ) ) )
+    
     return out
 
 def unzip(x):
@@ -24,7 +27,8 @@ def unzip(x):
         return [],[]        
     else:
         y = unzip(x[1:])
-        return  [ x[0][0] ] + y[0]  , [x[0][1]] + y[1] 
+        return  [ x[0][0] ] + y[0]  , [x[0][1]] + y[1]
+    
 def draw(points,func,delta= 0.05):
     a = min(points[0])
     b = max(points[0])
@@ -46,7 +50,7 @@ def draw(points,func,delta= 0.05):
 def main():
     out = get_list_from_file()
     points_list = [ unzip( out[i] ) for i in range(len(out)) ]
-    for i in range(len(points_list)):
+    for i in range(len(f)):
         plt.figure()
         draw(points_list[i],f[i])
         
