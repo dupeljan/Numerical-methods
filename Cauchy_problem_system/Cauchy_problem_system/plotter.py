@@ -1,11 +1,35 @@
+'''
+Ploating functions and set of float points
+from .txt files.
+Usage:
+0) Istall python3.
+Install lib numpy( in CMD : pip3 install numpy )
+            matplotlib ( in CMD : pip3 install matplotlib )
+1) Put script into dir with .txt file in it
+2) Put your functions into list f ( using numpy for standart functions )
+    !! .txt files must be sorted likewise f list !!
+3) Start sctipt
+ru
+Отрисовка графиков функций и множества вещественных точек
+из файлов .txt
+Использование:
+0) Установить python3
+Установить библиотеку numpy ( в командной строке виндовс : pip3 install numpy )
+Установить библиотеку matplotlib ( в командной строке виндовс : pip3 install matplotlib )
+1) Вставить скрипт в папку с .txt файлами
+2) Вставить функции в список f ( использовать numpy для стандартных функций )
+    !! .txt файлы должны следовать в том же порядке, что и функции в списке f !!
+3) Запустить скрипт
+'''
 import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-BORDER = 1.1
-EXAMPLE = 1
+BORDER = 0.1
+EXAMPLE = 1 
 
 if EXAMPLE == 1:
+    # Put your fuctions here | Вставлять функции здесь
     f = [ lambda x : np.exp(x) * x * x / 2 ,
           lambda x : (x + 1) * np.exp(x) ]
 
@@ -34,8 +58,8 @@ def draw(points,func,delta= 0.05):
     b = max(points[0])
     y_min = min(points[1])
     y_max = max(points[1])
-    border_x = (b - a) * (BORDER - 1)
-    border_y = (y_max - y_min) * (BORDER - 1)
+    border_x = (b - a) * BORDER 
+    border_y = (y_max - y_min) * BORDER
     
     t = np.arange( a, b+delta, delta)
     a -= border_x
