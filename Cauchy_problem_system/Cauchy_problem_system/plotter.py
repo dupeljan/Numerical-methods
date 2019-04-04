@@ -18,7 +18,7 @@ ru
 Установить библиотеку matplotlib ( в командной строке виндовс : pip3 install matplotlib )
 1) Вставить скрипт в папку с .txt файлами
 2) Вставить функции в список f ( использовать numpy для стандартных функций )
-    !! .txt файлы должны следовать в том же порядке, что и функции в списке f !!
+    !! имена .txt файлов должны следовать в том же порядке( лекс-граф ), что и функции в списке f !!
 3) Запустить скрипт
 '''
 import os
@@ -26,12 +26,22 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 BORDER = 0.1
-EXAMPLE = 1 
+EXAMPLE = 0
 
-if EXAMPLE == 1:
-    # Put your fuctions here | Вставлять функции здесь
+# Put your fuctions here | Вставлять функции здесь
+if EXAMPLE == 0:
+    f = [ lambda x :  np.exp(x) * ( 3 * np.cos(3 * x) - np.sin(3 * x) ) ,
+          lambda x :  np.exp(x) * 2 * np.sin(3 * x)]
+    
+elif EXAMPLE == 1:
     f = [ lambda x : np.exp(x) * x * x / 2 ,
           lambda x : (x + 1) * np.exp(x) ]
+
+elif EXAMPLE == 2:
+     f = [ lambda x : -1 + (2 + x) * np.exp(-x) ,
+           lambda x : x * np.exp( -x) ,
+           lambda x : -1 + (1 + x) * np.exp(-x)]
+
 
 def get_list_from_file():
     files = filter(lambda x : ".txt" in x, os.listdir() )
