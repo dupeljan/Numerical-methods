@@ -26,7 +26,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 BORDER = 0.1
-EXAMPLE = 0
+EXAMPLE = 3
 
 # Put your fuctions here | Вставлять функции здесь
 if EXAMPLE == 0:
@@ -41,6 +41,9 @@ elif EXAMPLE == 2:
      f = [ lambda x : -1 + (2 + x) * np.exp(-x) ,
            lambda x : x * np.exp( -x) ,
            lambda x : -1 + (1 + x) * np.exp(-x)]
+elif EXAMPLE == 3:
+    f = [ lambda x :  np.exp(x) + 2 * np.exp(-x) + x * np.exp(x) - x*x - 2 ,
+          lambda x :  np.exp(x) - 2 * np.exp(-x) + (x - 1) * np.exp(x) - 2 * x ]
 
 
 def get_list_from_file():
