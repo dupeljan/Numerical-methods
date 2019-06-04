@@ -26,11 +26,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 BORDER = 0.1
-EXAMPLE = 3
-
-# Put your fuctions here | Вставлять функции здесь
-if EXAMPLE == 3:
-    f = [ lambda x :  x + np.exp( -2 * x) ]
 
 def get_list_from_file():
     files = filter(lambda x : ".txt" in x, os.listdir() )
@@ -52,7 +47,7 @@ def unzip(x):
         y = unzip(x[1:])
         return  [ x[0][0] ] + y[0]  , [x[0][1]] + y[1]
     
-def draw(points,func,delta= 0.05):
+def draw(points,delta= 0.05):
     a = min(points[0])
     b = max(points[0])
     y_min = min(points[1])
@@ -66,16 +61,15 @@ def draw(points,func,delta= 0.05):
     y_min -= border_y
     y_max += border_y
     plt.axis([a,b,y_min,y_max])
-    plt.plot(t, func(t))
     plt.scatter(points[0],points[1],s=10,c='red')
     plt.grid(True)
     
 def main():
     out = get_list_from_file()
     points_list = [ unzip( out[i] ) for i in range(len(out)) ]
-    for i in range(len(f)):
+    for i in range(len(points_list)):
         plt.figure()
-        draw(points_list[i],f[i])
+        draw(points_list[i])
         
     plt.show()
    
